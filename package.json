@@ -25,10 +25,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mikeal/js-path-level-one.git"
+    "url": "git+https://github.com/ipld/js-path-level-one.git"
   },
   "bugs": {
-    "url": "https://github.com/mikeal/js-path-level-one/issues"
+    "url": "https://github.com/ipld/js-path-level-one/issues"
   },
-  "homepage": "https://github.com/mikeal/js-path-level-one#readme"
+  "homepage": "https://github.com/ipld/js-path-level-one#readme"
 }
