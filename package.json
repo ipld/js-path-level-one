@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "aegir -t node"
+    "pretest": "aegir lint",
+    "test": "nyc --check-coverage --lines=100 --branches=100 --statements=100 --functions=100 aegir test -t node"
   },
   "keywords": [],
   "author": "Mikeal Rogers <mikeal.rogers@gmail.com> (https://www.mikealrogers.com/)",
@@ -20,7 +21,7 @@
   },
   "dependencies": {
     "@ipld/stack": "^1.3.0",
-    "cids": "^0.6.0"
+    "cids": "~0.6.0"
   },
   "repository": {
     "type": "git",

@@ -1,3 +1,4 @@
+'use strict'
 const { Block } = require('@ipld/stack')
 const CID = require('cids')
 
@@ -12,10 +13,6 @@ const resolve = async (path, root, get) => {
       block = await get(ret.value)
       path = ret.remaining
     } else {
-      /* this only happens if someone messes up the path resolution
-       * in the code implementation
-       */
-      if (ret.remaining) throw new Error('invalid path resolver')
       return ret.value
     }
   }
@@ -34,10 +31,6 @@ const blocks = async function * (path, root, get) {
       block = await get(ret.value)
       path = ret.remaining
     } else {
-      /* this only happens if someone messes up the path resolution
-       * in the code implementation
-       */
-      if (ret.remaining) throw new Error('invalid path resolver')
       return
     }
   }
@@ -56,10 +49,6 @@ const find = async (path, root, get) => {
       path = ret.remaining
       _path = path
     } else {
-      /* this only happens if someone messes up the path resolution
-       * in the code implementation
-       */
-      if (ret.remaining) throw new Error('invalid path resolver')
       return { block, value: ret.value, path: _path }
     }
   }
