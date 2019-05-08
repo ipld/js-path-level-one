@@ -9,11 +9,11 @@ All functions take three arguments.
 * `root` - a CID or Block instance for the root node of the graph.
 * `get` - an async function that accepts a CID instance and returns a Block instance.
 
-## resolve(path, root, get)
+## async resolve(path, root, get)
 
 Returns the value of the target path.
 
-## find(path, root, get)
+## async find(path, root, get)
 
 Returns an object with the following properties:
 
